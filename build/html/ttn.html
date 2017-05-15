@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ТТН ЕГАИС &mdash; Документация Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0 1.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0 1.0" href="index.html"/>
+        <link rel="next" title="Организации ЕГАИС" href="org.html"/>
+        <link rel="prev" title="Алкогольная продукция ЕГАИС" href="alcprod.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+<div class="bi-wrapper">
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+            <a href="index.html"> Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0
+        
+
+        
+          
+          <img src="_static/Biz-Intel_Logo_v1.svg" class="logo" />
+        
+        </a>
+
+        
+<div role="search" class="search-form-container">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск по документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <div class="icon-search-container"><i class="fa fa-search"></i></div>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">О продукте</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alcprod.html">Алкогольная продукция ЕГАИС</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ТТН ЕГАИС</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Создание документа ТТН</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Сопоставление номенклатуры по товарам из ТТН</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Выбор номенклатуры из множественного сопоставления</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Ручное изменение данных</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="org.html">Организации ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exprot.html">Протокол обмена ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="korost.html">Корректировка остатков ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicefunctions.html">Сервисные функции ЕГАИС</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html"><i class="fa fa-file-text breadcrumbs-icon"></i> Документация </a>
+     <i class="fa fa-chevron-right"></i>
+    </li>
+      
+    <li>ТТН ЕГАИС</li>
+      <!--
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li> -->
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>ТТН ЕГАИС<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id2">
+<h2>Создание документа ТТН<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Документ ТТН можно создать на основании документов &#8220;Реализация товаров и услуг&#8221;, &#8220;Возврат товаров поставщику&#8221; и &#8220;Перемещение товаров&#8221;.
+При нажатии кнопки &#8220;Создать&#8221; откроется форма выбора документа основания для новой ТТН.</p>
+<div class="figure">
+<img alt="_images/ttn11.png" src="_images/ttn11.png" />
+</div>
+<p>После выбора документа откроется форма нового документа ТТН, заполненного на основании выбранного документа.</p>
+<div class="figure">
+<img alt="_images/ttn12.png" src="_images/ttn12.png" />
+</div>
+<div class="figure">
+<img alt="_images/ttn13.png" src="_images/ttn13.png" />
+</div>
+<p>Для отправки ТТН в ЕГАИС нужно заполнить справки Б у каждой номенклатуры. Это можно сделать вручную, либо автоматически по FIFO.
+При нажатии на кнопку &#8220;Заполнить справки по FIFO&#8221; справки подберутся автоматически.</p>
+<div class="figure">
+<img alt="_images/ttn14.png" src="_images/ttn14.png" />
+</div>
+<div class="figure">
+<img alt="_images/ttn15.png" src="_images/ttn15.png" />
+</div>
+<p>При нажатии на кнопку &#8220;Подобрать справки из остатков&#8221; будет открыт список справок Б, в нем же показаны остатки выбранного товара по этим справкам.</p>
+<div class="figure">
+<img alt="_images/ttn16.png" src="_images/ttn16.png" />
+</div>
+<div class="figure">
+<img alt="_images/ttn17.png" src="_images/ttn17.png" />
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Сопоставление номенклатуры по товарам из ТТН<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В табличной части &#8220;Товары&#8221; документа ТТН есть кнопка &#8220;Сопоставить номенклатуру&#8221;.</p>
+<div class="figure">
+<img alt="_images/ttn01.png" src="_images/ttn01.png" />
+</div>
+<p>При её нажатии появится окно списка номенклатуры ЕГАИС и ИБ.</p>
+<div class="figure">
+<img alt="_images/ttn02.png" src="_images/ttn02.png" />
+</div>
+<p>Если кнопка была нажата из входящего документа ТТН, то отбор по товарам из данной ТТН будет произведен в списке алкогольной продукции ЕГАИС, а если из исходящего, то в списке номенклатуры ИБ.</p>
+</div>
+<div class="section" id="id4">
+<h2>Выбор номенклатуры из множественного сопоставления<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если номенклатуре ЕГАИС, указанной в табличной части &#8220;Товары&#8221; входящей ТТН сопоставлено несколько номенклатур из ИБ, то вы можете выбрать одну из них.</p>
+<div class="figure">
+<img alt="_images/ttn03.png" src="_images/ttn03.png" />
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Ручное изменение данных<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Документ Товарно-транспортная накладная ЕГАИС в конфигурации существует для отражения состояния соответствующего документа в ЕГАИС. По результатам обмена с УТМ у документов меняется статус, присваивается номер идентификатора, номер и дата фиксации. Но в ряде случаев обмен может работать некорректно, (изменения могут не зафиксироваться например из-за плохого соединения, или неправильной работы УТМ) и если вы уверены что данные документа в вашей базе отличаются от данных того же документа в ЕГАИС, предусмотрена возможность изменить их самому, как бы вручную довести до актуальности.</p>
+<div class="figure">
+<img alt="_images/ttn04.png" src="_images/ttn04.png" />
+</div>
+<p>Если бы пользователю была дана возможность редактировать данные свободно, без определенного алгоритма сохранения изменения данных, то ни у пользователей, ни у техподдержки не было бы уверенности в актуальности данных документов в базе.
+С помощью ручного изменения данных пользователи могут изменять статус обработки, идентификатор ТТН, дату и номер фиксации в ЕГАИС, однако каждое это изменение будет записываться в регистр Ручные изменения данных ТТН. При включении режима изменения в регистр записываются текущие данные ТТН. После этого их можно изменять, каждое изменение будет фиксироваться. В любой момент можно откатить все изменения вернув первоначальные данные.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">Изменение данных в информационной базе не повлечет за собой изменение их в ЕГАИС.</p>
+</div>
+<div class="figure">
+<img alt="_images/ttn05.png" src="_images/ttn05.png" />
+</div>
+<p>Для возможности изменения данных вручную, нужно включить разрешение ручного изменения нажав на галочку &#8220;Разрешить ручное изменение&#8221;. После положительного ответа на предупреждение, изменение станет доступным. Справа отображается список регистра Ручные изменения данных ТТН по текущей ТТН. Когда изменение станет доступным, в списке будет одна запись.</p>
+<div class="figure">
+<img alt="_images/ttn06.png" src="_images/ttn06.png" />
+</div>
+<p>После заполнения данных вручную нажимайте кнопку &#8220;Изменить данные&#8221;, окно закроется и изменения будут видны в документе.</p>
+<div class="figure">
+<img alt="_images/ttn07.png" src="_images/ttn07.png" />
+</div>
+<div class="figure">
+<img alt="_images/ttn08.png" src="_images/ttn08.png" />
+</div>
+<p>Чтобы вернуться к первоначальным данным, которые были до ручного изменения нажмите кнопку &#8220;Вернуть первоначальные данные&#8221;.</p>
+<div class="figure">
+<img alt="_images/ttn09.png" src="_images/ttn09.png" />
+</div>
+<div class="figure">
+<img alt="_images/ttn10.png" src="_images/ttn10.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="org.html" class="btn btn-neutral float-right" title="Организации ЕГАИС" accesskey="n"> &nbsp;Следующий&nbsp; <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="alcprod.html" class="btn btn-neutral" title="Алкогольная продукция ЕГАИС" accesskey="p"><span class="fa fa-arrow-circle-left"></span> &nbsp;Предыдущий&nbsp; </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Бизнес-интеллект.
+    </p>
+  </div>
+  
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  <br> Theme was modified by <a href="http://www.biz-intel.ru">Бизнес-интеллект</a>
+  .
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+</div>
+</body>
+</html>

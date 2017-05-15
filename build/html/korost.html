@@ -1,0 +1,235 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Корректировка остатков ЕГАИС &mdash; Документация Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0 1.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
+    <link rel="top" title="Документация Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0 1.0" href="index.html"/>
+        <link rel="next" title="Сервисные функции ЕГАИС" href="servicefunctions.html"/>
+        <link rel="prev" title="Протокол обмена ЕГАИС" href="exprot.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+<div class="bi-wrapper">
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+            <a href="index.html"> Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0
+        
+
+        
+          
+          <img src="_static/Biz-Intel_Logo_v1.svg" class="logo" />
+        
+        </a>
+
+        
+<div role="search" class="search-form-container">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск по документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <div class="icon-search-container"><i class="fa fa-search"></i></div>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">О продукте</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alcprod.html">Алкогольная продукция ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ttn.html">ТТН ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="org.html">Организации ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exprot.html">Протокол обмена ЕГАИС</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Корректировка остатков ЕГАИС</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicefunctions.html">Сервисные функции ЕГАИС</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Модуль 1С-ЕГАИС для конфигураций 1С:Управление торговлей 11.х, 1С:Бухгалтерия, ред 3.0</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html"><i class="fa fa-file-text breadcrumbs-icon"></i> Документация </a>
+     <i class="fa fa-chevron-right"></i>
+    </li>
+      
+    <li>Корректировка остатков ЕГАИС</li>
+      <!--
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li> -->
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Корректировка остатков ЕГАИС<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Обработка используется для синхронизации остатков между информационной базой и ЕГАИС с учетом остатков в обоих регистрах (оптовом и розничном). Сначала загружаются остатки ЕГАИС, сравниваются с текущими остатками из ИБ, и на основе этих несоответствий создаются документы, после отправки которых вы скорректируете в ЕГАИС информацию по текущим остаткам из информационной базы.</p>
+<p>В обработке действует пошаговый интерфейс, вы постранично вводите нужную обработке информацию.</p>
+<div class="figure">
+<img alt="_images/korost01.png" src="_images/korost01.png" />
+</div>
+<p>На первой странице вы выбираете организацию. Также вы можете выбрать группу номенклатуры, которую будете синхронизировать, если включите галочку &#8220;Отбирать по группам&#8221;, тогда будет видно поле &#8220;Группа номенклатуры&#8221;, в котором вы можете выбрать нужную группу из справочника &#8220;Номенклатура&#8221;. При выключенной галочке будет выбрана вся алкогольная продукция.
+Переключатель &#8220;Все, Маркируемые, Немаркируемые&#8221; отберёт эту номенклатуру по кодам вида продукции. То есть, если вы выберете, например, &#8220;Немаркируемые&#8221;, тогда будет отбираться только номенклатура с кодами 261, 262, 263, 500, 510, 520. При положении переключателя &#8220;Маркируемые&#8221; будет отбираться номенклатура со всеми остальными кодами исключая перечисленные ранее.</p>
+<p>При нажатии на кнопку &#8220;Перейти вперед&#8221; вы перейдете на страницу выбора актуальных остатков.</p>
+<div class="figure">
+<img alt="_images/korost02.png" src="_images/korost02.png" />
+</div>
+<p>Вы можете запросить остатки из ЕГАИС или выбрать из запрашиваемых ранее, используя документы &#8220;Синхронизация остатков ЕГАИС&#8221; и &#8220;Загрузка остатков из торгового зала&#8221;.</p>
+<p>Если хотя бы один переключатель установлен в положение &#8220;Запросить остатки ...&#8221;, тогда после нажатия на кнопку &#8220;Перейти вперед&#8221; в ЕГАИС отправляется запрос. Убедитесь в правильности настроек УТМ для связи с ЕГАИС.</p>
+<div class="figure">
+<img alt="_images/korost03.png" src="_images/korost03.png" />
+</div>
+<p>Обработка отправляет запрос и каждые 2 минуты после этого проверяет, не пришел ли ответ. Эта страница не показывается, если остатки из обоих регистров были выбраны из загруженных документов, так как остатки уже загружены и ожидание не требуется. Когда ответ приходит, на экран выводится следующая страница, уведомляющая о том, что остатки загружены и их можно посмотреть.</p>
+<div class="figure">
+<img alt="_images/korost04.png" src="_images/korost04.png" />
+</div>
+<p>Теперь вы можете приступить к автоматическому созданию корректировочных документов нажатием кнопки &#8220;Перейти вперед&#8221;.</p>
+<div class="figure">
+<img alt="_images/korost05.png" src="_images/korost05.png" />
+</div>
+<p>В таблицу корректировок, которая видна на экране, записываются сначала запрашиваемые остатки из ЕГАИС или из загруженных ранее документов (в зависимости от того, что вы до этого выбрали). После этого в эту таблицу добавляются остатки из информационной базы. Обратите внимание, что в таблицу могут вывестись номенклатура ЕГАИС, не сопоставленная с номенклатурой ИБ и наоборот, номенклатура из регистра &#8220;Остатки на складе&#8221;, которой не соответствует ни одна из позиции номенклатуры ЕГАИС. Такая номенклатура попадает в данную таблицу, даже если она не попадает в отбор по выбранной номенклатурной группе - это сделано для того, чтобы не сопоставленная номенклатура была видна сразу. Вообще если есть несопоставленная номенклатура, остатки не смогут быть скорректированы правильно.</p>
+<p>Колонки &#8220;Регистр1&#8221; и &#8220;Регистр2&#8221; заполняются по данным ЕГАИС, колонка &#8220;Остаток на складе&#8221; заполняется по данным информационной базы, остальные две колонки &#8220;Передать в торговый зал&#8221; и &#8220;Постановка / списание&#8221; заполняются из показателей остальных колонок и на их основе делаются корректировочные документы. В поле &#8220;Передать в торговый зал&#8221; просто передается показатель первого регистра из ЕГАИС. Поле &#8220;Постановка / списание&#8221; рассчитывается по формуле:</p>
+<p>Постановка / списание = Остаток на складе - Регистр1 - Регистр2</p>
+<p>Таким образом, если в таблице есть ненулевые показатели колонки &#8220;Постановка / списание&#8221;, на основе этих показателей создается документ &#8220;Передача продукции в торговый зал ЕГАИС&#8221; с табличной частью &#8220;Товары&#8221;, соответствующей этим показателям. На основе показателей колонки &#8220;Постановка / списание&#8221; создаются документы &#8220;Акт постановки на баланс в торговом зале ЕГАИС&#8221;, если числовое значение положительное, или &#8220;Акт списания с баланса в торговом зале ЕГАИС&#8221;, если числовой показатель отрицательный. Все эти документы сразу создадутся после нажатия кнопки &#8220;Перейти вперед&#8221;.</p>
+<div class="figure">
+<img alt="_images/korost06.png" src="_images/korost06.png" />
+</div>
+<p>После того как документы созданы, вы можете их отправить в ЕГАИС для корректировки данных.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="servicefunctions.html" class="btn btn-neutral float-right" title="Сервисные функции ЕГАИС" accesskey="n"> &nbsp;Следующий&nbsp; <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="exprot.html" class="btn btn-neutral" title="Протокол обмена ЕГАИС" accesskey="p"><span class="fa fa-arrow-circle-left"></span> &nbsp;Предыдущий&nbsp; </a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Бизнес-интеллект.
+    </p>
+  </div>
+  
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+  <br> Theme was modified by <a href="http://www.biz-intel.ru">Бизнес-интеллект</a>
+  .
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+</div>
+</body>
+</html>
