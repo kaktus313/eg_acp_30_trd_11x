@@ -241,6 +241,25 @@ latex_documents = [
 # If false, no module index is generated.
 #latex_domain_indices = True
 
+latex_engine = 'xelatex'
+latex_elements = {
+    'fontenc': '\\usepackage{fontspec}',
+    'fontpkg': '''\
+\\setmainfont{DejaVu Serif}
+\\setsansfont{DejaVu Sans}
+\\setmonofont{DejaVu Sans Mono}''',
+    'geometry': '\\usepackage[vmargin=2.5cm, hmargin=3cm]{geometry}',
+    'preamble': '''\
+\\usepackage[titles]{tocloft}
+\\cftsetpnumwidth {1.25cm}\\cftsetrmarg{1.5cm}
+\\setlength{\\cftchapnumwidth}{0.75cm}
+\\setlength{\\cftsecindent}{\\cftchapnumwidth}
+\\setlength{\\cftsecnumwidth}{1.25cm}''',
+    'fncychap': '\\usepackage[Bjornstrup]{fncychap}',
+    'printindex': '\\footnotesize\\raggedright\\printindex',
+}
+latex_show_urls = 'footnote'
+
 
 # -- Options for manual page output ---------------------------------------
 
